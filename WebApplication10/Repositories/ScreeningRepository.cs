@@ -26,6 +26,14 @@ public class ScreeningRepository
             .FirstAsync(s => s.Id == id);
     }
 
+    public async Task CancelReservation(long reservationId)
+    {
+        var reservation = new Reservation { Id = reservationId };
+        _context.Reservations.Attach(reservation);
+        _context.Reservations.Remove(reservation);
+        await _context.SaveChangesAsync();
+    }
+
     public async Task<Reservation> CreateReservation(ReserveSeatsRequest request, IdentityUser user)
     {
         var screening = await _context.Screenings

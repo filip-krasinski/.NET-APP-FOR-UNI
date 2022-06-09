@@ -325,4 +325,7 @@
   font-size: 2rem;
 }
 
+main {
+  min-height: 62.5vh;
+}
 /*# sourceMappingURL=main.css.map */

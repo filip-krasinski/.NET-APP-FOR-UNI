@@ -8,7 +8,7 @@ Rezerwacje
       var base64 = Convert.ToBase64String(movie.Poster);
       var imgSrc = $"data:image/jpeg;base64,{base64}";
       
-      <div class="reservation">
+      <div class="reservation" id="@reservation.Id">
             <div class="movie">
                   <img class="movie--poster" src="@imgSrc" />
                   <div class="movie--info">
@@ -24,7 +24,33 @@ Rezerwacje
                               }
                         </div>
                   </div>
-                  <button class="reservation--cancel">Anuluj rezerwacje</button>
+                  <button class="reservation--cancel" id="cancelReservation" data-id="@reservation.Id">Anuluj rezerwacje</button>
             </div>
       </div>
 }
+
+<script>
+  const buttons = document.getElementsByClassName('reservation--cancel');
+  for (let button of buttons) {
+      const id = button.getAttribute('data-id');
+      button.onclick = (() => {
+        $.ajax({
+              url: 'https://localhost:7152/Home/CancelReservation',
+              type: 'DELETE',
+              dataType: 'json',
+              data: { 
+                  ReservationId: id
+              } ,
+              cache: false,
+              success: function (result) {
+                  alertSuccess('Anulowano rezerwacje!', 5000);
+                  document.getElementById(id).remove();
+              },
+              error: function (xhr, ajaxOptions, thrownError) {
+                  alert(xhr.status);
+                  alert(thrownError);
+              }
+          });
+      })
+  }
+</script>

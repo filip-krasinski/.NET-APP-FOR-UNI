@@ -28,6 +28,13 @@ public class HomeController : Controller
         _screeningRepository = screeningRepository;
     }
     
+    [HttpDelete]
+    public async Task<IActionResult> CancelReservation(long reservationId)
+    {
+        await _screeningRepository.CancelReservation(reservationId);
+        return Json(null);
+    }
+    
     [HttpPost]
     public async Task<IActionResult> ReserveSeats(ReserveSeatsRequest request)
     {
