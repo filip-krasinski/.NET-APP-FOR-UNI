@@ -1,0 +1,44 @@
+﻿@model DateTime
+@using WebApplication10.ViewComponents
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<input type="date" id="inputDate"/>
+
+<div id="events">
+    
+</div>
+
+<script>
+    @{
+        var today = DateTime.Today.ToString("yyy-MM-dd");
+        var twoWeeksFromToday = DateTime.Today.AddDays(14).ToString("yyy-MM-dd");
+    }
+
+    const dateInput = document.getElementById('inputDate');
+    dateInput.value = '@today'
+    dateInput.min = '@today'
+    dateInput.max = '@twoWeeksFromToday'
+    dateInput.addEventListener('change', (event) => {
+       loadViewForDate(event.target.value)
+    });
+    
+    setTimeout(() => {
+        console.log(dateInput.value)
+        loadViewForDate(dateInput.value);   
+    })
+    
+    const loadViewForDate = (date) => {
+        $.ajax({
+            url: '@Url.Action("MovieList", "Home")',
+            data: {
+                date: date,
+            },
+            success: function (data) {
+                document.getElementById('events').innerHTML = data;
+                
+            }
+        })
+    }
+</script>

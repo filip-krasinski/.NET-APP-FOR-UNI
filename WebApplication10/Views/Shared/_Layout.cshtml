@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - WebApplication10</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/WebApplication10.styles.css" asp-append-version="true"/>
+</head>
+<body>
+<header>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-toggleable-sm navbar-dark bg-black box-shadow mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Super Kino</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+                </ul>
+                <partial name="_LoginPartial"/>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container mt-5 pt-5">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<div class="footer">
+
+  <div class="footer--container">
+    <div class="footer__logo--wrapper">
+      <div class="footer__logo">Super Kino</div>
+    </div>
+
+    <div class="footer__menu">
+      <div class="footer__menu--item--header">Product</div>
+      <div class="footer__menu--item">Developers</div>
+      <div class="footer__menu--item">Advertising</div>
+      <div class="footer__menu--item">Guides</div>
+    </div>
+
+    <div class="footer__menu">
+      <div class="footer__menu--item--header">Our Company</div>
+      <div class="footer__menu--item">About Super Kino</div>
+      <div class="footer__menu--item">Careers</div>
+      <div class="footer__menu--item">Blog</div>
+    </div>
+
+    <div class="footer__menu">
+      <div class="footer__menu--item--header">Resources</div>
+      <div class="footer__menu--item">Talk to Support</div>
+      <div class="footer__menu--item">API Docs</div>
+      <div class="footer__menu--item">System Status</div>
+    </div>
+
+    <div class="footer__menu">
+      <div class="footer__menu--item--header">Get in touch</div>
+      <div class="footer__menu--item">Questions or feedback?</div>
+      <div class="footer__menu--item--vm-smaller">We'd love to hear from you</div>
+    </div>
+
+
+    <div class="footer--row">
+      <div class="footer__bottom--left">
+        <span class="footer__bottom--item">Terms of service</span>
+        <span class="footer__bottom--item">Privacy Policy</span>
+        <span class="footer__bottom--item">Cookies</span>
+      </div>
+      <div class="footer__bottom--right">
+        <app-icon class="footer__bottom--icon" icon="linkedin"></app-icon>
+        <app-icon class="footer__bottom--icon" icon="instagram"></app-icon>
+        <app-icon class="footer__bottom--icon" icon="twitter"></app-icon>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

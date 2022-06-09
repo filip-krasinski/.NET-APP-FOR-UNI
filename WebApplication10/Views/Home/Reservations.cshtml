@@ -1,0 +1,11 @@
+﻿@using WebApplication10.ViewComponents
+@using System.Security.Claims
+@{
+    ViewData["Title"] = "Moje rezerwacje";
+}
+
+@{
+    var userId = User.Claims
+        .FirstOrDefault(o => o.Type == ClaimTypes.NameIdentifier)?.Value;
+    @await Component.InvokeAsync("Reservations", userId)
+}

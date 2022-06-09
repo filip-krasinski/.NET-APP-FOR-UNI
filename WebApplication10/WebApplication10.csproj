@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-WebApplication10-6A537B35-48FF-4EB0-86D2-E2A71A8C3FBD</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.3" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Home\Components\MovieList\Default.cshtml" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\Styles\main.scss" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="Styles\main.scss" />
+    </ItemGroup>
+
+    <Target Name="Install NPM modules" BeforeTargets="Build" Inputs="package-lock.json" Outputs="node_modules/.install-stamp">
+        <Exec Command="npm ci" Condition="'$(OS)' != 'Windows_NT'" />
+        <Exec Command="npm install" Condition="'$(OS)' == 'Windows_NT'" />
+        <Touch Files="node_modules/.install-stamp" AlwaysCreate="true" />
+    </Target>
+
+    <Target Name="Compile SCSS" BeforeTargets="CopyFilesToPublishDirectory">
+        <Exec Command="npm run build:css" />
+        <Copy SourceFiles="$(ProjectDir)wwwroot/css/site.css" DestinationFolder="$(PublishDir)wwwroot/css" />
+    </Target>
+
+</Project>

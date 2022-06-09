@@ -1,0 +1,12 @@
+﻿@using WebApplication10.ViewComponents
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+@{
+    var id = Url.ActionContext.RouteData.Values["id"];
+    @await Component.InvokeAsync("ScreeningReservation", new
+    {
+        id = long.Parse(id.ToString())
+    })
+}

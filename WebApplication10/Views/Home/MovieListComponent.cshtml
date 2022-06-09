@@ -1,0 +1,42 @@
+﻿@model System.Collections.Generic.List<WebApplication6.Models.Movie>
+
+<div class="movies">
+  @foreach (var movie in Model)
+  {
+    var base64 = Convert.ToBase64String(movie.Poster);
+    var imgSrc = $"data:image/jpeg;base64,{base64}";
+
+
+    <div class="movie">
+      <img class="movie--poster" src="@imgSrc" />
+      <div class="movie--info">
+        <span class="movie--title">@movie.Title</span>
+        <div class="movie__details">
+          <span class="movie__details--genres">@string.Join(", ", movie.Genres)</span>
+          <span class="movie__details--age">&nbsp Od lat: @movie.FromAge &nbsp</span>
+          <span class="movie__details--duration">| @movie.Duration minut</span>
+        </div>
+        <span class="movie--description">@movie.Description[..Math.Min(movie.Description.Length, 500)] ...</span>
+        <div class="screenings">
+          @foreach (var screening in movie.Screenings.OrderBy(s => s.ScreeningDate))
+          {
+            <a class="screening" 
+               sp-area="" 
+               asp-controller="Home" 
+               asp-action="ScreeningReservation"
+               asp-route-id="@screening.Id"
+            >
+              <span class="screening--date">
+                @screening.ScreeningDate.ToString("HH:mm")
+              </span>
+              <span class="screening--info">
+                2D, napisy
+              </span>
+            </a>
+          }
+        </div>
+      </div>
+            
+    </div>
+  }
+</div>

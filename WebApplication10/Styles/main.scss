@@ -1,0 +1,351 @@
+﻿
+.movie {
+  display: flex;
+  flex-flow: row;
+  text-align: left;
+  padding: 30px;
+  &--poster {
+    height: 250px;
+    width: 170px;
+  }
+  &--info {
+    display: flex;
+    flex-flow: column;
+    margin-left: 30px;
+  }
+
+  &--title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &__details {
+    display: flex;
+    flex-flow: row;
+    &--genres:after {
+      content: ' | ';
+    }
+
+  }
+}
+
+.screenings {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  height: 100%;
+  .screening {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    border-radius: 5px;
+    width: 120px;
+    height: 60px;
+    border: 2px solid #c8006d;
+    //border-right: 2px solid #7a0042;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    
+    &:hover {
+      background: linear-gradient(90deg,#c8006d,#a60059 48%,#7a0042)
+    }
+    
+    &--date {
+      font-size: 24px;
+    }
+    &--info {
+      font-size: 16px;
+    }
+  }
+}
+
+.seats {
+  display: grid;
+  gap: 5px;
+  &__wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+    .info {
+      margin-bottom: 30px;
+      text-align: center;
+      &--header {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      &--date {
+
+      }
+    }
+  }
+}
+
+@mixin seat {
+  width: 50px;
+  height: 50px;
+  font-size: 12px;
+  
+  cursor: pointer;
+}
+.seat {
+  @include seat;
+  background: #358e72;
+  &--taken {
+    @include seat;
+    background: #262a69;
+  }
+  &--chosen {
+    @include seat;
+    background: #0a53be;
+  }
+  &--index {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &:hover {
+    background: #0a53be;
+  }
+  &__legend {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 15px;
+    &--wrapper {
+      display: flex;
+      flex-flow: column;
+    }
+    &--free {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: #358e72;
+    }
+    &--taken {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: #262a69;
+    }
+    &--chosen {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: #0a53be;
+    }
+    &--text {
+      margin-left: 10px;
+    }
+  }
+}
+
+.chosen {
+  &--title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &__wrapper {
+    display: flex;
+    flex-flow: row;
+  }
+}
+
+#reservation--button {
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #c8006d;
+  outline: none;
+  cursor: pointer;
+  height: 60px;
+  margin-top: 60px;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background: linear-gradient(90deg,#c8006d,#a60059 48%,#7a0042)
+  }
+}
+
+.aalert {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 200px;
+  height: 100px;
+  color: white;
+  z-index: 9999;
+  border-radius: 15px;
+  &--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  &--success {
+    background: #25a45a;
+  }
+  &--error {
+    background: #d25b5b;
+  }
+}
+
+.flex--row {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation {
+  margin-top: 30px;
+  border-radius: 15px;
+  border: 1px solid gray;
+  overflow: hidden;
+  .movie {
+    padding: 0;
+  }
+  &--cancel {
+    border-radius: 15px;
+    margin: 30px 30px 0 auto;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: none;
+    color: #fff;
+    background: #fc4141;
+    border: none;
+    transition: all 0.125ms ease-in-out;
+    &:hover {
+      background: #ea1b1b;
+    }
+  }
+}
+
+
+.footer {
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  background: #000000;
+
+  padding-bottom: 2rem; //medium
+
+  &--container {
+    height: 100%;
+
+    color: #FFFFFF;
+
+    display: flex;
+    gap: 7%;
+    margin: 0 15% 0 8%;
+    flex-wrap: wrap;
+    @media (max-width: 1300px) {
+      margin: 0 0 0 2rem;
+    }
+    @media (max-width: 1000px) {
+      margin: 0 10% 0 8%;
+    }
+    @media (max-width: 810px) {
+      flex-flow: column;
+    }
+  }
+  &--row {
+    display: flex;
+    flex-flow: row;
+    flex-basis: 100%;
+    white-space: nowrap;
+    gap: 8%;
+
+    
+    margin-top: 4rem; //big
+    
+    @media (max-width: 640px) {
+      flex-flow: column-reverse;
+    }
+  }
+
+  &__bottom {
+    &--item {
+      font-size: 1rem;
+      color: #949494;
+      margin-right: 30px;
+      cursor: pointer;
+
+      &:hover {
+        color: #08e84b;
+      }
+    }
+    &--icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: 3.2rem;
+      display: inline-block;
+      cursor: pointer;
+
+      &:hover {
+        color: #08e84b;
+      }
+    }
+    &--left {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &--right {
+      display: inline-block;
+      margin-left: auto;
+      margin-right: 50px;
+
+      @media (max-width: 640px) {
+        margin-left: unset;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &__logo {
+    margin-top: 2rem; //medium
+    //@include logo-default;
+    font-size: 2rem;//big
+    &--wrapper {
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+
+  }
+
+  &__menu {
+    margin-top: 4rem;//big
+
+    &--item {
+      margin-top: 27px;
+
+      font-size: 1rem; //small
+      cursor: pointer;
+      white-space: nowrap;
+      &:hover {
+        color: #08e84b;
+      }
+
+      &--vm-smaller {
+        margin-top: 14px;
+        font-size: 1rem; //small
+      }
+
+      &--header {
+        color: #949494;
+        white-space: nowrap;
+        font-size: 2rem; //medium
+      }
+    }
+  }
+}

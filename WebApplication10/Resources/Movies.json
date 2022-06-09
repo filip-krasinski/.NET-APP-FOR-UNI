@@ -1,0 +1,72 @@
+[
+    { 
+        "Title": "Batman", 
+        "Description": "Dwa lata pod postacią Batmana (Robert Pattinson) i strach w sercach kryminalistów sprawiły, że Bruce Wayne ujrzał najmroczniejsze oblicze Gotham City. Mając u boku jedynie garstkę zaufanych sojuszników — w tym Alfreda Pennywortha (Andy Serkis) i porucznika Jamesa Gordona (Jeffrey Wright) — i występując przeciwko sitwie skorumpowanych urzędników oraz osobistości, samotny mściciel stał się w mniemaniu obywateli miasta jedynym obrońcą sprawiedliwości. Nieznany zabójca w sadystyczny i wyrachowany sposób nęka elitę Gotham. Największy Detektyw Świata, kierując się zaszyfrowanymi wiadomościami, trafia do półświatka. Tam w trakcie swojego śledztwa spotyka takie postacie jak Selina Kyle, zwana Kobietą-Kot (Zoë Kravitz), Oswald Cobblepot, czyli Pingwin (Colin Farrell), Carmine Falcone (John Turturro) i Edward Nashton, tudzież Człowiek-Zagadka (Paul Dano). Wreszcie dowody zaczynają się konkretyzować, a zamiary sprawcy stają się jasne. Batman zostaje zmuszony do szukania nowych sprzymierzeńców, żeby zdemaskować winowajcę i położyć kres nadużywaniu władzy i korupcji, od dawna nękających Gotham City.", 
+        "Genres": ["Science-Fiction", "Sensacyjny"], 
+        "FromAge": 13, 
+        "Duration": 176
+    },
+    { 
+        "Title": "AMBULANS", 
+        "Description": "W ciągu jednego dnia los trzech osób zmieni się na zawsze. To historia braci, którzy napadają na bank. W thrillerze reżysera i producenta Michaela Baya, Will (w tej roli zdobywca nagrody Emmy, Yahya Abdul-Mateen II) potrzebuje pieniędzy na pokrycie rachunków medycznych swojej żony. Will prosi o pomoc jedyną osobę, której właśnie nie powinien o to prosić-do przybranego brata Danny’ego (w tej roli nominowany do Oscara® Jake Gyllenhaal). Danny jest przestępcą i proponuje Willowi udział w napadzie na bank. Do podziału jest 32 miliony dolarów. Will nie odmawia. Jednak ich ucieczka kończy się spektakularnym niepowodzeniem. Zdesperowani bracia porywają karetkę z rannym policjantem, któremu pomaga ratowniczka, Cam (Eiza González, „Szybcy i Wściekli: Hobbs & Shaw”). Will i Danny uciekają przed całą policja Los Angeles, muszą utrzymać przy życiu zakładników i jakoś starać się nie pozabijać nawzajem.", 
+        "Genres": ["Akcja", "Dramat", "Thriller"], 
+        "FromAge": 15, 
+        "Duration": 135
+    },
+    { 
+        "Title": "BELLE", 
+        "Description": "17-letnia Suzu, półsierota, wraz ze swoim ojcem mieszka w prowincjonalnej prefekturze Kochi. Porzuciła śpiew, który był jej wielką pasją w dzieciństwie, ponieważ po śmierci matki przywoływał bolesne wspomnienia z przeszłości. Aby uporać się z bólem związanym ze stratą i nie najlepszą relacją z ojcem, Suzu coraz więcej czasu spędza w sieci.", 
+        "Genres": ["Animowany", "Science-Fiction"], 
+        "FromAge": 13, 
+        "Duration": 122
+    },
+    { 
+        "Title": "MORBIUS", 
+        "Description": "Morbius, jedna z najważniejszych, najbardziej złożonych postaci uniwersum Marvela. W postać enigmatycznego antybohatera – Michaela Morbiusa – wciela się laureat Oscara® Jared Leto. Śmiertelnie chory na rzadką chorobę krwi, zdeterminowany, by uratować siebie i innych chorych, dr Morbius rozpoczyna ryzykowną grę. Ale coś, co początkowo wydaje się wielkim sukcesem, szybko staje się czymś znacznie gorszym niż zdiagnozowana choroba…", 
+        "Genres": ["Akcja", "Science-Fiction"], 
+        "FromAge": 13, 
+        "Duration": 104
+    },
+    { 
+        "Title": "UNCHARTED", 
+        "Description": "To ekranizacja bardzo popularnej gry. W roli Nathana Drake'a zobaczymy Toma Hollanda (\"Spider-Man: Daleko od domu\"). W filmie zagrają również Mark Wahlberg oraz Antonio Banderas. Ruben Fleischer (\"Venom\") wyreżyseruje film na podstawie scenariusza napisanego przez Matta Holloway'a i Arta Marcuma (\"Iron Man\", \"Morbius\").", 
+        "Genres": ["Przygodowy"], 
+        "FromAge": 13, 
+        "Duration": 115
+    },
+    {
+        "Title": "MARZEC 68",
+        "Description": "Warszawa, rok 1968. Studenci protestują przeciwko bezprawnemu relegowaniu kolegów z uczelni oraz w obronie zdjętych z afisza „Dziadów”, w reżyserii Kazimierza Dejmka, wystawianych w Teatrze Narodowym. Wśród protestującej młodzieży są także Hania i Janek. Ich rodziny znajdują się po dwóch stronach marcowej barykady. Młodzi i szaleńczo w sobie zakochani, niczym w dramacie Szekspira „Romeo i Julia”, w ogarniętym buntem kraju, walczą o swoje uczucie. Czy ich miłość przetrwa? Czy zdołają pokonać przeciwności, które stawia przed nimi los?",
+        "Genres": ["Dramat", "Romans"],
+        "FromAge": 13,
+        "Duration": 122
+    },    
+    {
+        "Title": "SING 2",
+        "Description": "Miś koala - Buster Moon i gwiazdorska obsada jego teatru pragną wystąpić na olśniewającej, wspaniałej i ekstrawaganckiej scenie. Jest tylko jeden haczyk: najpierw muszą przekonać najbardziej samotną gwiazdę rocka na świecie (głosu użycza legenda muzyki-Bono, debiut w animacji), aby do nich dołączyła. Buster (zdobywca Oscara® Matthew McConaughey) i jego ekipa zmienili teatr New Moon we wspaniałe miejsce, ale Buster chciałby, aby nowy spektakl zadebiutował na scenie tearu Crystal w olśniewającym mieście Redshore.",
+        "Genres": ["Animowany", "Familijny"],
+        "FromAge": 3,
+        "Duration": 110
+    },    
+    {
+        "Title": "TO NIE WYPANDA",
+        "Description": "Nastoletnia Mei cierpi na specyficzną przypadłość, gdy się mocno ekscytuje zmienia się w pandę rudą.",
+        "Genres": ["Animowany", "Familijny"],
+        "FromAge": 6,
+        "Duration": 101
+    },    
+    {
+        "Title": "ZAGINIONE MIASTO",
+        "Description": "Błyskotliwa, ale samotna pisarka Loretta Sage (Sandra Bullock) pisze popularne powieści romantyczno-przygodowe, na okładkach których występuje model, Alan (Channing Tatum). Alan tak się wczuł w rolę, że naprawdę myśli, że jest „Dashem” z powieści.",
+        "Genres": ["Akcja", "Komedia", "Przygodowy"],
+        "FromAge": 13,
+        "Duration": 112
+    },    
+    {
+        "Title": "ZA DUŻY NA BAJKI",
+        "Description": "Turniej, kasa i psychofanki – to życiowe PIRYTETY dziesięcioletniego e-sportowca Waldka. Kiedy jest już na dobrej drodze do realizacji swoich życiowych celów, mając do tego wsparcie ukochanej, choć nadopiekuńczej mamy, pojawia się ona… cała na kolorowo – ciotka Mariolka. Od tej pory życie Waldka będzie musiało nabrać nieco innego tempa…",
+        "Genres": ["Familijny", "Obyczajowy"],
+        "FromAge": 7,
+        "Duration": 106
+    }
+]

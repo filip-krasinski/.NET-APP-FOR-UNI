@@ -1,0 +1,30 @@
+@model IList<WebApplication6.Models.Reservation>
+
+Rezerwacje
+
+@foreach(var reservation in Model)
+{
+      var movie = reservation.Screening.Movie;
+      var base64 = Convert.ToBase64String(movie.Poster);
+      var imgSrc = $"data:image/jpeg;base64,{base64}";
+      
+      <div class="reservation">
+            <div class="movie">
+                  <img class="movie--poster" src="@imgSrc" />
+                  <div class="movie--info">
+                        <span class="movie--title">@movie.Title</span>
+                        <div class="movie__details">
+                              <span class="movie__details--duration">@reservation.Screening.ScreeningDate</span>
+                        </div>
+                        <div class="tickets">
+                              <div class="tickets--amount">Ilość miejsc: @reservation.Seats.Count</div>
+                              @foreach (var seat in reservation.Seats)
+                              {
+                                    <div class="ticket">rząd: @(seat.ColNumber + 1), miejsce: @(seat.RowNumber + 1)</div>
+                              }
+                        </div>
+                  </div>
+                  <button class="reservation--cancel">Anuluj rezerwacje</button>
+            </div>
+      </div>
+}
